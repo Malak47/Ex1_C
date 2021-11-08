@@ -27,22 +27,22 @@ libclassrec.so: $(OBJECT_BASICRECURSION)
 	$(CC) -shared -o libclassrec.so $(OBJECT_BASICRECURSION)
 
 mains: main.o libclassrec.a
-	$(CC) $(FLAGS) -o mains main.o libclassrec.a -lm
+	$(CC) $(FLAGS) -o mains main.o libclassrec.a
 
 maindloop: main.o libclassloops.so
-	$(CC) $(FLAGS) -o maindloop main.o ./libclassloops.so -lm
+	$(CC) $(FLAGS) -o maindloop main.o ./libclassloops.so
 
 maindrec: main.o libclassrec.so
-	$(CC) $(FLAGS) -o maindrec main.o ./libclassrec.so -lm
+	$(CC) $(FLAGS) -o maindrec main.o ./libclassrec.so
 
 main.o: main.c NumClass.h
 	$(CC) $(FLAGS) -c main.c
 
 basicClassification.o: basicClassification.c
-	$(CC) $(FLAGS) -c basicClassification.c -lm
+	$(CC) $(FLAGS) -c basicClassification.c
 
 advancedClassificationLoop.o: advancedClassificationLoop.c
-	$(CC) $(FLAGS) -c advancedClassificationLoop.c -lm
+	$(CC) $(FLAGS) -c advancedClassificationLoop.c
 
 advancedClassificationRec.o: advancedClassificationRec.c
 	$(CC) $(FLAGS) -c advancedClassificationRec.c
