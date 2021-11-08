@@ -6,6 +6,14 @@ OBJECT_BASICRECURSION = basicClassification.o advancedClassificationRecursion.o
 
 all: mains maindloop maindrec libclassloops.a libclassloops.so libclassrec.a libclassrec.so
 
+loops: libclassloops.a
+
+loopd: libclassloops.so
+
+recursived: libclassrec.so
+
+recursives: libclassrec.a
+
 libclassloops.a: $(OBJECT_BASICLOOP)
 	$(AR) -rsc libclassloops.a $(OBJECT_BASICLOOP)
 
