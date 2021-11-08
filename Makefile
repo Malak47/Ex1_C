@@ -48,5 +48,5 @@ advancedClassificationRec.o: advancedClassificationRec.c
 	$(CC) $(FLAGS) -c advancedClassificationRec.c
 
 clean:
-	rm *.o *.a *.so mains maindloop maindrec
+	rm -f *.o *.a *.so mains maindloop maindrec
 
