@@ -4,7 +4,7 @@ FLAGS = -Wall -g
 OBJECT_BASICLOOP = basicClassification.o advancedClassificationLoop.o
 OBJECT_BASICRECURSION = basicClassification.o advancedClassificationRecursion.o
 
-all: mains maindloop maindrec libclassloops.a libclassloops.so libclassrec.a libclassrec.so
+all: mains maindloop maindrec loops loopd recursives recursived
 
 loops: libclassloops.a
 
@@ -48,5 +48,5 @@ advancedClassificationRec.o: advancedClassificationRec.c
 	$(CC) $(FLAGS) -c advancedClassificationRec.c -lm
 
 clean:
-	rm *.o *.a *.so mains maindloop maindrec
+	rm -f *.o *.a *.so mains maindloop maindrec
 
