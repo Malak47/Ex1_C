@@ -8,9 +8,7 @@ will return if a number is Armstrong number.
 An Armstrong number is an n-digit number that is equal to the sum of the nth powers of its digits.
 */
 int isArmstrong(int num) {
-	if (num == NULL) {
-		return -1;
-	}
+	
 	int count = 0;
 	int sum = 0;
 	int rec = num;
@@ -43,9 +41,6 @@ A palindrome number is a number that remains the same when digits are reversed.
 */
 int isPalindrome(int num)
 {
-	if (num == NULL) {
-		return -1;
-	}
 	int rev = 0;
 	int rec = num;
 	while (num > 0) {
