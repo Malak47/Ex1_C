@@ -11,9 +11,6 @@ int isPrime(int num)
 	if (num == 2) {
 		return 1;
 	}
-	if (num == NULL) {
-		return -1;
-	}
 	else if (num % 2 == 0) {
 		return 0;
 	}
@@ -35,9 +32,6 @@ Strong number is a special number whose sum of the factorial of digits is equal 
 
 // Factorial
 int fact(int num) {
-	if (num == NULL) {
-		return -1;
-	}
 	if (num == 0 || num == 1) {
 		return 1;
 	}
@@ -45,9 +39,6 @@ int fact(int num) {
 }
 
 int isStrong(int num) {
-	if (num == NULL) {
-		return -1;
-	}
 	int sum = 0;
 	int rec = num;
 	while ((num > 0)) {
